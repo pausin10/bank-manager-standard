@@ -6,4 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>bank-manager-client</artifactId>
+  
+  <dependencies>
+		<dependency>
+			<groupId>com.ontimize</groupId>
+			<artifactId>bank-manager-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+  
 </project>
