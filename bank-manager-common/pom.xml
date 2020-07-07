@@ -9,10 +9,18 @@
 	</parent>
 	<artifactId>bank-manager-common</artifactId>
 	<dependencies>
+	
 		<dependency>
 			<groupId>com.ontimize</groupId>
 			<artifactId>ontimize-core</artifactId>
 			<version>${ontimize.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
 	</dependencies>
 </project>
