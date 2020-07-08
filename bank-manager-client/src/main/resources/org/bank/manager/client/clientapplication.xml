@@ -6,10 +6,15 @@
 	resources="org.bank.manager.client.i18n.bundle" locale="es_ES"
 	encrypt="no">
 	<!-- Application configuration params -->
+	
 	<ReferenceLocator remotelocatorname="BankManager"
-		local="false" class="com.ontimize.locator.ReferenceLocator"
-		packageorhostname="localhost" port="49015"
-		checkservermessagesperiod="4000" />
+    local="false"
+    class="com.ontimize.locator.PermissionReferenceLocator"
+    packageorhostname="localhost"
+    port="49015"
+    checkservermessagesperiod="4000"
+    ClientPermissionColumn="XMLCLIENT"/>
+    
 	<Menu archive="menu/menu.xml" />
 	<MenuListener
 		class="org.bank.manager.client.menu.AppMenuListener" />
@@ -23,8 +28,18 @@
 		form="modules/administration/formusers.xml"
 		imanager="com.ontimize.gui.BasicInteractionManager"
 		tree="modules/administration/treemanagerusers.xml"></FormManager>
-	
-	<FormManager id="Manageraccounts" form="modules/management/formaccounts.xml" imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanageraccounts.xml"></FormManager>
-    <FormManager id="Managercustomers" form="modules/management/formcustomers.xml" imanager="com.ontimize.gui.BasicInteractionManager" tree="modules/management/treemanagercustomers.xml"></FormManager>
-	
+
+	<FormManager id="Manageraccounts"
+		form="modules/management/formaccounts.xml"
+		imanager="com.ontimize.gui.BasicInteractionManager"
+		tree="modules/management/treemanageraccounts.xml"></FormManager>
+	<FormManager id="Managercustomers"
+		form="modules/management/formcustomers.xml"
+		imanager="com.ontimize.gui.BasicInteractionManager"
+		tree="modules/management/treemanagercustomers.xml"></FormManager>
+
+	<FormManager id="Managerprofiles"
+		form="modules/administration/formprofiles.xml"
+		imanager="com.ontimize.gui.BasicInteractionManager"></FormManager>
+
 </MainApplication>

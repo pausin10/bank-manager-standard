@@ -27,6 +27,12 @@
         <artifactId>ontimize-more-plaf-styles-white</artifactId>
         <version>${plaf-style.version}</version>
     </dependency>
+    
+    <dependency>
+        <groupId>com.ontimize</groupId>
+        <artifactId>ontimize-more-permission</artifactId>
+        <version>${permission.version}</version>
+    </dependency>
 		
 	</dependencies>
 

@@ -25,4 +25,8 @@
 		icon="org/bank/manager/client/images/customer.png"
 		attr="Managercustomers"></ApToolBarButton>
 
+	<ApToolBarButton
+		icon="org/bank/manager/client/images/profiles.png"
+		attr="Managerprofiles"></ApToolBarButton>
+
 </ApplicationToolBar>
