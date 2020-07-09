@@ -2,11 +2,17 @@
 <FormExt entity="ECustomers" keys="CUSTOMERID"
 	columns="NAME;ADDRESS;STARTDATE" setvalueorder="Name"
 	title="clientmanagement" buttons="yes">
-	<FormHeader standardbuttons="yes" />
+	<FormHeader standardbuttons="yes">
+		<FormHeaderButton key="updateType" tip="updateType"
+			icon="org/bank/manager/client/images/updatetype.png" />
+		<FormHeaderButton key="duplicateRecord"
+			tip="duplicateRecord"
+			icon="org/bank/manager/client/images/duplicaterecord.png" />
+	</FormHeader>
 	<IntegerDataField attr="CUSTOMERID" enabled="no"
 		visible="no" />
 	<Row>
-		<Column expand="no" title="Imagen">
+		<Column expand="no" title="Image">
 			<ImageDataField attr="PHOTO" height="200" width="144"
 				labelvisible="no" expand="yes" buttons="top"
 				emptyimage="com/ontimize/gui/images/emptyimage2.gif" />
@@ -40,54 +46,7 @@
 				attr="EMAIL" labelsize="14" dim="text" />
 		</Column>
 	</Row>
-
 	<TabPanel>
-		<Tab attr="ECustomerAccountBalance">
-			<Row expand="yes">
-				<Column title="ECustomerAccountBalance">
-					<Table entity="ECustomerAccountBalance" disableinsert="yes"
-						cols="ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;CUSTOMER"
-						visiblecols="ACCOUNT;BALANCE" key="ANID"
-						keys="ENTITYID;OFFICEID;CDID" title="ECustomerAccountBalance"
-						form="formaccounts.xml" parentkey="CUSTOMERID" sumrow="BALANCE"
-						rows="4" refreshbutton="yes" />
-				</Column>
-			</Row>
-		</Tab>
-		<Tab attr="Comments">
-			<Row expand="yes" title="">
-				<MemoDataField font="Verdana" attr="COMMENTS"
-					labelvisible="no" expand="yes" dim="text" />
-			</Row>
-		</Tab>
-
-		<Tab attr="ECustomerAccountBalance">
-			<Row expand="yes">
-				<Column title="ECustomerAccountBalance">
-					<Table entity="ECustomerAccountBalance" disableinsert="yes"
-						cols="ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;CUSTOMER;STARTDATE;ENDDATE"
-						visiblecols="ACCOUNT;STARTDATE;ENDDATE;BALANCE" key="ANID"
-						keys="ENTITYID;OFFICEID;CDID" title="ECustomerAccountBalance"
-						form="formaccounts.xml" parentkey="CUSTOMERID" sumrow="BALANCE"
-						rows="4" refreshbutton="yes" />
-				</Column>
-			</Row>
-		</Tab>
-
-		<Tab attr="ECustomerAccountBalance">
-			<Row expand="yes">
-				<Column title="ECustomerAccountBalance">
-					<Table entity="ECustomerAccountBalance" disableinsert="yes"
-						cols="ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;CUSTOMER;STARTDATE;ENDDATE"
-						visiblecols="ACCOUNT;STARTDATE;ENDDATE;BALANCE" key="ANID"
-						keys="ENTITYID;OFFICEID;CDID" title="ECustomerAccountBalance"
-						form="formaccounts.xml" parentkey="CUSTOMERID" sumrow="BALANCE"
-						rows="4" refreshbutton="yes" editablecolumns="STARTDATE;ENDDATE"
-						updateentityeditablecolumns="STARTDATE;ENDDATE" />
-				</Column>
-			</Row>
-		</Tab>
-
 		<Tab attr="ECustomerAccountBalance">
 			<Row expand="yes">
 				<Column title="ECustomerAccountBalance">
@@ -102,7 +61,11 @@
 				</Column>
 			</Row>
 		</Tab>
-
-
+		<Tab attr="Comments">
+			<Row expand="yes" title="">
+				<MemoDataField attr="COMMENTS" labelvisible="no"
+					expand="yes" dim="text" font="Verdana" />
+			</Row>
+		</Tab>
 	</TabPanel>
 </FormExt>
